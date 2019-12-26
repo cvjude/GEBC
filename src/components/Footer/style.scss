@@ -1,0 +1,58 @@
+@import '../../media';
+
+.footer {
+  background: grey;
+  padding: 40px 0 100px;
+
+  .bout {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 20px;
+    text-align: left;
+    @include for-size(phone-only) {
+      display: block;
+    }
+    p {
+      display: block;
+    }
+
+    .logo {
+      grid-column: 1/2;
+      width: 70px;
+      height: 70px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .bout-sect {
+      grid-column: 3/6;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      grid-column: 7/10;
+      margin-bottom: 20px;
+      .num {
+        margin-top: 10px;
+      }
+    }
+
+    .copy-right {
+      grid-column: 1/7;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      grid-column: 7/10;
+      margin-bottom: 20px;
+      display: flex;
+
+      > a {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

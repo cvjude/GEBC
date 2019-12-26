@@ -1,8 +1,8 @@
+@import './media';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,4 +28,25 @@ body,
 
 .links {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.color-theme {
+  color: color(theme);
+}
+
+.flex-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.object-cover {
+  object-fit: cover !important;
 }

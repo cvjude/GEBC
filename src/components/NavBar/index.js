@@ -38,7 +38,7 @@ const NavBar = () => {
     return () => {};
   }, [currentScroll, navBar]);
 
-  const handleClick = () => {};
+  // const handleClick = () => {};
 
   return (
     <nav className='navbar' ref={navBar}>
