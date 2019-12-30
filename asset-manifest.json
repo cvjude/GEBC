@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/gebc/static/css/main.40b7c04a.chunk.css",
+    "main.js": "/gebc/static/js/main.905a7f92.chunk.js",
+    "main.js.map": "/gebc/static/js/main.905a7f92.chunk.js.map",
+    "runtime-main.js": "/gebc/static/js/runtime-main.8d7cfff7.js",
+    "runtime-main.js.map": "/gebc/static/js/runtime-main.8d7cfff7.js.map",
+    "static/js/2.6658964e.chunk.js": "/gebc/static/js/2.6658964e.chunk.js",
+    "static/js/2.6658964e.chunk.js.map": "/gebc/static/js/2.6658964e.chunk.js.map",
+    "index.html": "/gebc/index.html",
+    "precache-manifest.35602331aee9a28fa951e9dffed253d9.js": "/gebc/precache-manifest.35602331aee9a28fa951e9dffed253d9.js",
+    "service-worker.js": "/gebc/service-worker.js",
+    "static/css/main.40b7c04a.chunk.css.map": "/gebc/static/css/main.40b7c04a.chunk.css.map",
+    "static/js/2.6658964e.chunk.js.LICENSE": "/gebc/static/js/2.6658964e.chunk.js.LICENSE",
+    "static/media/Congregation.jpg": "/gebc/static/media/Congregation.91f52a5e.jpg",
+    "static/media/Help.png": "/gebc/static/media/Help.03dda373.png",
+    "static/media/Image 01.png": "/gebc/static/media/Image 01.5a5527db.png",
+    "static/media/Image 02.png": "/gebc/static/media/Image 02.8c984946.png",
+    "static/media/Instagram.png": "/gebc/static/media/Instagram.30673003.png",
+    "static/media/Logo.png": "/gebc/static/media/Logo.dcbd230a.png",
+    "static/media/Man.png": "/gebc/static/media/Man.ed823702.png",
+    "static/media/Time.png": "/gebc/static/media/Time.2cc12a6e.png",
+    "static/media/World.png": "/gebc/static/media/World.4653c214.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d7cfff7.js",
+    "static/js/2.6658964e.chunk.js",
+    "static/css/main.40b7c04a.chunk.css",
+    "static/js/main.905a7f92.chunk.js"
+  ]
+}
