@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -47,6 +47,24 @@ img {
   align-items: center;
 }
 
+.flex-full-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.jus-center {
+  justify-content: center;
+}
+
+.ali-center {
+  align-items: center;
+}
+
 .object-cover {
   object-fit: cover !important;
 }
@@ -55,4 +73,17 @@ p,
 dd,
 dt {
   color: color(shade);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: left;
 }

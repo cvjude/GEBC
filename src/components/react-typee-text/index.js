@@ -31,6 +31,7 @@ const AnimateText = ({ text, period, play, unmount, style }) => {
               setDelta(period);
               setIsDeleting(true);
               setPause(true);
+
               const timeout = setTimeout(function() {
                 setPause(false);
               }, 1000);

@@ -22,6 +22,10 @@
     transform: translate(-50%, -50%);
     color: white;
 
+    .imgCaption {
+      height: 400px;
+    }
+
     h2 {
       font-size: 120px;
     }
@@ -31,6 +35,9 @@
     }
 
     @include for-size(tablet-portrait-up) {
+      .imgCaption {
+        height: 300px;
+      }
       h2 {
         font-size: 100px;
       }
@@ -41,6 +48,9 @@
     }
 
     @include for-size(phone-only) {
+      .imgCaption {
+        height: auto;
+      }
       h2 {
         font-size: 70px;
       }

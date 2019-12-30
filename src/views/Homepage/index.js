@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Banner from '../../components/Banner';
 import Service from '../../components/Services';
 import Man from '../../assets/Man.png';
+import welcome from '../../assets/Welcome.png';
 import congregation from '../../assets/Congregation.jpg';
 import ArrowRight from '../../assets/Icons/ArrowRight';
 import BlogCard from '../../components/BlogCard';
@@ -9,10 +10,18 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 
 export default class index extends Component {
+  state = {
+    unmount: false
+  };
+
+  componentWillUnmount() {
+    this.setState({ unmount: true });
+  }
+
   render() {
     return (
       <section className='homepage'>
-        <Banner caption='Welcome' isHome={true} />
+        <Banner imgSrc={welcome} isHome={true} unmount={this.state.unmount} />
 
         <section className='learn-us'>
           <div className='flex-full text-container'>

@@ -1,0 +1,28 @@
+@import '../../media';
+
+.about {
+  .short-desc {
+    margin: 40px auto;
+  }
+
+  .mission {
+    height: 70vh;
+    margin: 40px auto;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .text-sec {
+      width: 50%;
+      div {
+        margin-bottom: 20px;
+      }
+    }
+
+    .img-sec {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
