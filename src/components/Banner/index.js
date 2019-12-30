@@ -29,6 +29,7 @@ class Banner extends Component {
                   text={['Great!', 'Energetic!', 'Belivers!']}
                   play={true}
                   period={0}
+                  style={{ color: 'white' }}
                   unmount={this.state.unmount}
                 />
               </strong>

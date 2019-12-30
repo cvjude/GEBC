@@ -60,7 +60,40 @@ export default class index extends Component {
         </section>
 
         <section className='journey'>
-          <h2>Discovery The To Christ</h2>
+          <h2 className='header'>Discovery The Journey To Christ</h2>
+          <div className='content'>
+            <p>
+              God so loved the world that he gave his one and only Son, that
+              whoever believes in him shall not perish but have eternal life.
+            </p>
+            <p>- John 3:16</p>
+          </div>
+          <div className='journey-cards'>
+            <div className='box right'>
+              <div className='content'>
+                <h2>Accept that you are a sinner</h2>
+                <p>
+                  Roman 3:23 - For all have sinned and fall short of the glory
+                  of God
+                </p>
+              </div>
+              <div className='border'></div>
+            </div>
+            <div className='box left'>
+              <div className='content'>
+                <h2>Accept Christ as your Lord</h2>
+                <p>John 3:16 - Come to Christ for Life</p>
+              </div>
+              <div className='border'></div>
+            </div>
+            <div className='box right'>
+              <div className='content'>
+                <h2>Join a Fellowship</h2>
+                <p>Find a bible believing church around you</p>
+              </div>
+              <div className='border'></div>
+            </div>
+          </div>
         </section>
       </section>
     );

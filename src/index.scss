@@ -50,3 +50,9 @@ img {
 .object-cover {
   object-fit: cover !important;
 }
+
+p,
+dd,
+dt {
+  color: color(shade);
+}

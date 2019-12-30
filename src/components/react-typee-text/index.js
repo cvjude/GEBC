@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
 
-const AnimateText = ({ text, period, play, unmount }) => {
+const AnimateText = ({ text, period, play, unmount, style }) => {
   const [delta, setDelta] = useState(200);
   const [loopNum, setLoopNum] = useState(0);
   const [word, setWord] = useState('');
@@ -63,7 +63,7 @@ const AnimateText = ({ text, period, play, unmount }) => {
   ]);
 
   return play ? (
-    <p className='typee'>
+    <p className='typee' style={style}>
       {word}
       <span className='cursor'></span>
     </p>

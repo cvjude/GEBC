@@ -1,8 +1,12 @@
 @import '../../media';
 
 .footer {
-  background: grey;
+  background: color(shade);
   padding: 40px 0 100px;
+
+  p {
+    color: white !important;
+  }
 
   .bout {
     display: grid;
