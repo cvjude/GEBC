@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gebc/static/css/main.40b7c04a.chunk.css",
-    "main.js": "/gebc/static/js/main.905a7f92.chunk.js",
-    "main.js.map": "/gebc/static/js/main.905a7f92.chunk.js.map",
+    "main.css": "/gebc/static/css/main.7319a6cb.chunk.css",
+    "main.js": "/gebc/static/js/main.be08e33a.chunk.js",
+    "main.js.map": "/gebc/static/js/main.be08e33a.chunk.js.map",
     "runtime-main.js": "/gebc/static/js/runtime-main.8d7cfff7.js",
     "runtime-main.js.map": "/gebc/static/js/runtime-main.8d7cfff7.js.map",
-    "static/js/2.6658964e.chunk.js": "/gebc/static/js/2.6658964e.chunk.js",
-    "static/js/2.6658964e.chunk.js.map": "/gebc/static/js/2.6658964e.chunk.js.map",
+    "static/js/2.97008416.chunk.js": "/gebc/static/js/2.97008416.chunk.js",
+    "static/js/2.97008416.chunk.js.map": "/gebc/static/js/2.97008416.chunk.js.map",
     "index.html": "/gebc/index.html",
-    "precache-manifest.35602331aee9a28fa951e9dffed253d9.js": "/gebc/precache-manifest.35602331aee9a28fa951e9dffed253d9.js",
+    "precache-manifest.cd8824d6035a471b8a7e07c3873a96ac.js": "/gebc/precache-manifest.cd8824d6035a471b8a7e07c3873a96ac.js",
     "service-worker.js": "/gebc/service-worker.js",
-    "static/css/main.40b7c04a.chunk.css.map": "/gebc/static/css/main.40b7c04a.chunk.css.map",
-    "static/js/2.6658964e.chunk.js.LICENSE": "/gebc/static/js/2.6658964e.chunk.js.LICENSE",
+    "static/css/main.7319a6cb.chunk.css.map": "/gebc/static/css/main.7319a6cb.chunk.css.map",
+    "static/js/2.97008416.chunk.js.LICENSE": "/gebc/static/js/2.97008416.chunk.js.LICENSE",
     "static/media/Congregation.jpg": "/gebc/static/media/Congregation.91f52a5e.jpg",
     "static/media/Help.png": "/gebc/static/media/Help.03dda373.png",
     "static/media/Image 01.png": "/gebc/static/media/Image 01.5a5527db.png",
@@ -20,12 +20,14 @@
     "static/media/Logo.png": "/gebc/static/media/Logo.dcbd230a.png",
     "static/media/Man.png": "/gebc/static/media/Man.ed823702.png",
     "static/media/Time.png": "/gebc/static/media/Time.2cc12a6e.png",
+    "static/media/Welcome.png": "/gebc/static/media/Welcome.715f8106.png",
+    "static/media/Who We Are.png": "/gebc/static/media/Who We Are.167b8d70.png",
     "static/media/World.png": "/gebc/static/media/World.4653c214.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8d7cfff7.js",
-    "static/js/2.6658964e.chunk.js",
-    "static/css/main.40b7c04a.chunk.css",
-    "static/js/main.905a7f92.chunk.js"
+    "static/js/2.97008416.chunk.js",
+    "static/css/main.7319a6cb.chunk.css",
+    "static/js/main.be08e33a.chunk.js"
   ]
 }
