@@ -1,0 +1,16 @@
+.typee {
+  display: inline;
+
+  span {
+    display: inline;
+    padding: 0 2px;
+    border-right: 0.05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
