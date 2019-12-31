@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Banner from '../../components/Banner';
+import Services from '../../components/Services';
 import whoWeAre from '../../assets/Who We Are.png';
 import man from '../../assets/Image 02.png';
+import pastor from '../../assets/Image 03.png';
+import CoreValues from './CoreValues';
 import './style.scss';
 
 export default class index extends Component {
@@ -44,6 +47,22 @@ export default class index extends Component {
             <img src={man} alt='' />
           </div>
         </section>
+
+        <CoreValues />
+
+        <section className='container pastor'>
+          <h2 className='text-left'>Lead pastor</h2>
+          <div className='flex-full lead-pastor'>
+            <div className='img-sec'>
+              <img className='object-cover' src={pastor} alt='' />
+            </div>
+            <div className='flex-full text-sec'>
+              <p>I will provide the text here</p>
+            </div>
+          </div>
+        </section>
+
+        <Services />
       </main>
     );
   }
