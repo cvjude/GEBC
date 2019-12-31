@@ -51,7 +51,7 @@
         height: 360px;
 
         img {
-          object-fit: contain !important;
+          // object-fit: contain !important;
         }
       }
     }
@@ -60,6 +60,9 @@
   .church-desc {
     display: flex;
     height: 60vh;
+    @include for-size(phone-only) {
+      flex-direction: row-reverse;
+    }
 
     .text-sec {
       background: color(theme);
