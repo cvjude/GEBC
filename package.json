@@ -1,8 +1,8 @@
 {
-  "name": "rex",
+  "name": "gebc",
   "version": "0.1.0",
   "private": true,
-  "description": "App name",
+  "description": "GEBC church website",
   "dependencies": {
     "@hot-loader/react-dom": "^16.13.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-alice-carousel": "^1.19.3",
     "react-app-rewire-hot-loader": "^2.0.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
@@ -26,8 +27,7 @@
     "react-transition-group": "^4.3.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "serve": "^11.3.0",
-    "tiny-slider-react": "^0.4.0"
+    "serve": "^11.3.0"
   },
   "scripts": {
     "start": "serve -s build",

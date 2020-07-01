@@ -1,6 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Banner from './Banner';
+import Message from '../../components/Message';
+import PastorMessage from './Message';
+import Possiblities from './Possiblities';
+import ServiceTimes from './ServiceTimes';
+import CoreValues from '../../components/CoreValues';
+import Journey from './Journey';
+import Pictures from './Pictures';
+import Email from '../../components/Email';
 import Footer from '../../components/Footer';
 import './style.scss';
 
@@ -14,6 +22,14 @@ const HomePage = () => {
         </Helmet>
 
         <Banner />
+        <Message />
+        <PastorMessage />
+        <Possiblities />
+        <ServiceTimes />
+        <CoreValues />
+        <Journey />
+        <Pictures />
+        <Email />
       </main>
       <Footer />
     </>

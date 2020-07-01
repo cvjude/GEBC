@@ -1,0 +1,89 @@
+@import '../../media';
+
+.core_cards {
+  width: 100%;
+  // width: 300px;
+  background: color(theme);
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 300px;
+  margin: 0 5px;
+
+  .img_sec {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .text-sec {
+    color: white;
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.cr_vals {
+  width: 100%;
+
+  margin: 100px 0;
+
+  .hd,
+  .s_hd {
+    text-align: center;
+  }
+
+  .alice-carousel {
+    width: 80%;
+    margin: 0;
+
+    @include for-size(tablet-landscape-up) {
+      width: 90%;
+    }
+  }
+
+  .alice-carousel__stage-item {
+    padding: 0 10px;
+    transition: 0.5s ease;
+  }
+
+  .carousel_sec {
+    position: relative;
+    margin-top: 100px;
+
+    .btns {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 85%;
+      @include for-size(tablet-landscape-up) {
+        width: 95%;
+      }
+
+      @include for-size(phone-only) {
+        width: 100%;
+        top: 30%;
+      }
+
+      .l_arrow,
+      .r_arrow {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background: color(secondary);
+
+        svg {
+          width: 50%;
+          height: 50%;
+          margin-right: 5px;
+          fill: white;
+        }
+      }
+
+      .r_arrow {
+        border-radius: 50px 0 0 50px;
+        width: 70px;
+      }
+    }
+  }
+}

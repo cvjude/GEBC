@@ -1,13 +1,13 @@
-#nav-1 {
-  height: 80px;
+.nav-1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: transparent;
 
-  nav {
-    justify-content: space-between;
-    height: 100%;
-
-    .logo {
-      width: 100px;
-      height: 80%;
-    }
+  &.slide-down {
+    background: white;
+    box-shadow: 0 0 10px rgba(#000000, 0.2);
   }
 }

@@ -1,0 +1,55 @@
+@import '../../media';
+
+.ft_sx {
+  min-height: 300px;
+  height: auto;
+
+  .ft_con {
+    flex-grow: 1;
+
+    .contents {
+      width: 100%;
+      flex-wrap: wrap;
+      color: black;
+      font-weight: 500;
+      padding: 100px 0 70px;
+
+      @include for-size(tablet-landscape-up) {
+        padding: 100px 0;
+      }
+
+      .logo {
+        min-width: 150px;
+      }
+
+      .na_gt {
+        min-width: 100px;
+        margin-bottom: 30px;
+        h3 {
+          color: color(theme);
+          margin-bottom: 20px;
+        }
+
+        @include for-size(phone-only) {
+          margin: 30px 0;
+        }
+
+        .links {
+          color: inherit;
+          padding: 5px 10px 5px 0;
+        }
+      }
+
+      .cn_us {
+        img {
+          margin-left: 5px;
+          width: 30px;
+
+          @include for-size(tablet-landscape-up) {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
