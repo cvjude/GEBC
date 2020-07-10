@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react';
-import MainNav from '../MainNav';
-import './style.scss';
+import React, { useRef, useEffect, useState } from "react";
+import MainNav from "../MainNav";
+import "./style.scss";
 
 const NavBar = () => {
   const navRef = useRef();
   const currentScroll = useRef();
+  const [slide, setSlide] = useState(false);
 
   useEffect(() => {
     let reqId;
@@ -20,9 +21,11 @@ const NavBar = () => {
         currentScroll.current = window.scrollY;
 
         if (currentScroll.current > 50) {
-          navRef.current.classList.add('slide-down');
+          navRef.current.classList.add("slide-down");
+          setSlide(true);
         } else {
-          navRef.current.classList.remove('slide-down');
+          navRef.current.classList.remove("slide-down");
+          setSlide(false);
         }
       }
 
@@ -35,8 +38,8 @@ const NavBar = () => {
   }, [currentScroll, navRef]);
 
   return (
-    <header className='nav-1' ref={navRef}>
-      <MainNav />
+    <header className="nav-1" ref={navRef}>
+      <MainNav slide={slide} />
     </header>
   );
 };

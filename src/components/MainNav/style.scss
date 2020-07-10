@@ -1,4 +1,4 @@
-@import '../../media';
+@import "../../media";
 
 .nav-1 .main-nav {
   height: 100%;
@@ -42,6 +42,14 @@
     .contents {
       width: 100%;
 
+      .l_s {
+        &.white {
+          .lin_con .links {
+            color: white;
+          }
+        }
+      }
+
       @include for-size(tablet-portrait-up) {
         position: absolute;
         flex-direction: column;
@@ -70,7 +78,7 @@
 
         .dropDown {
           position: absolute;
-          background: white;
+          background: white !important;
           padding: 10px;
           min-width: 100px;
           border-radius: 5px;
@@ -80,6 +88,7 @@
           box-shadow: 0 0 10px rgba(black, 0.2);
           transition: 0.5s ease;
           visibility: hidden;
+          z-index: 10;
 
           &.op-dp_223 {
             opacity: 1;

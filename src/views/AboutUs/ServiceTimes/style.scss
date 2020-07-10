@@ -1,0 +1,76 @@
+@import "../../../media";
+
+.bt_us .wwu {
+  background: #fff9fd;
+  padding: 100px 0;
+
+  .hd {
+    color: color(theme);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .s_hd {
+    color: color(text_fade);
+    text-align: center;
+  }
+
+  .nxt {
+    margin-top: 100px;
+  }
+
+  .crds {
+    margin-top: 30px;
+
+    @include for-size(tablet-portrait-up) {
+      flex-direction: column;
+    }
+
+    .plch {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      height: 120px;
+      margin: 0 30px;
+      min-width: 400px;
+
+      @include for-size(tablet-portrait-up) {
+        margin: 30px 0;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      p {
+        @include for-size(tablet-portrait-up) {
+          font-size: 0.8em;
+        }
+      }
+
+      .date {
+        height: 100%;
+        background: red;
+        margin-right: 20px;
+        width: 60px;
+        color: white;
+        border-radius: 10px;
+        font-weight: 500;
+
+        &.theme {
+          background: color(theme);
+        }
+
+        &.green {
+          background: color(off);
+        }
+
+        &.secondary {
+          background: color(secondary);
+        }
+
+        &.off {
+          background: color(off_secondary);
+        }
+      }
+    }
+  }
+}

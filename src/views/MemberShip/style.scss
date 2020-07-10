@@ -1,0 +1,48 @@
+@import "../../media";
+
+.min_st {
+  .mn_sec {
+    margin-top: 100px;
+  }
+
+  .learn-us {
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(#f4f5ff, 0.51), rgba(#f4f5ff, 0.51));
+    background-size: 100% 30%;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include for-size(phone-only) {
+      display: block;
+      background-size: 100% 50%;
+    }
+
+    .text-sec {
+      text-align: left;
+      width: 70%;
+
+      @include for-size(phone-only) {
+        margin-bottom: 50px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .image-sec {
+      width: 40%;
+      position: relative;
+
+      img {
+        object-position: right;
+      }
+      @include for-size(phone-only) {
+        width: 100%;
+        height: 400px;
+
+        img {
+          object-fit: contain !important;
+        }
+      }
+    }
+  }
+}
