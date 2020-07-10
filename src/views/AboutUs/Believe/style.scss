@@ -1,0 +1,37 @@
+@import "../../../media";
+
+.believe {
+  margin: 150px 0;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .bl-card {
+    height: 500px;
+
+    @include for-size(phone-only) {
+      height: auto;
+    }
+
+    .img-sec {
+      height: 100%;
+      position: relative;
+    }
+    .text-sec {
+      padding-left: 30px;
+
+      @include for-size(phone-only) {
+        margin-top: 30px;
+        padding: 0;
+        p {
+          font-size: 1em;
+        }
+      }
+
+      p {
+        color: color(text);
+      }
+    }
+  }
+}

@@ -1,61 +1,54 @@
 @import '../../media';
 
-.footer {
-  background: color(shade);
-  padding: 40px 0 100px;
+.ft_sx {
+  min-height: 300px;
+  height: auto;
 
-  p {
-    color: white !important;
-  }
+  .ft_con {
+    flex-grow: 1;
 
-  .bout {
-    display: grid;
-    color: white;
-    grid-template-columns: repeat(9, 1fr);
-    row-gap: 20px;
-    text-align: left;
-    @include for-size(phone-only) {
-      display: block;
-    }
-    p {
-      display: block;
-    }
+    .contents {
+      width: 100%;
+      flex-wrap: wrap;
+      color: black;
+      font-weight: 500;
+      padding: 100px 0 70px;
 
-    .logo {
-      grid-column: 1/2;
-      width: 70px;
-      height: 70px;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    .bout-sect {
-      grid-column: 3/6;
-      margin-bottom: 20px;
-    }
-
-    .contact {
-      grid-column: 7/10;
-      margin-bottom: 20px;
-      .num {
-        margin-top: 10px;
+      @include for-size(tablet-landscape-up) {
+        padding: 100px 0;
       }
-    }
 
-    .copy-right {
-      grid-column: 1/7;
-      margin-bottom: 20px;
-    }
+      .logo {
+        min-width: 150px;
+      }
 
-    .icon {
-      grid-column: 7/10;
-      margin-bottom: 20px;
-      display: flex;
+      .na_gt {
+        min-width: 100px;
+        margin-bottom: 30px;
+        h3 {
+          color: color(theme);
+          margin-bottom: 20px;
+        }
 
-      > a {
-        width: 20px;
-        height: 20px;
-        margin-right: 20px;
+        @include for-size(phone-only) {
+          margin: 30px 0;
+        }
+
+        .links {
+          color: inherit;
+          padding: 5px 10px 5px 0;
+        }
+      }
+
+      .cn_us {
+        img {
+          margin-left: 5px;
+          width: 30px;
+
+          @include for-size(tablet-landscape-up) {
+            width: 25px;
+          }
+        }
       }
     }
   }

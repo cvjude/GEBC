@@ -1,0 +1,32 @@
+@import '../../media';
+
+.bg_ms {
+  padding: 100px 0;
+
+  @include for-size(tablet-landscape-up) {
+    padding: 70px 0;
+  }
+
+  @include for-size(phone-only) {
+    padding: 50px 0;
+  }
+
+  .head {
+    font-weight: 400;
+    font-size: 50px;
+    color: color(theme);
+    width: 80%;
+
+    @include for-size(desktop-up) {
+      font-size: 35px;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      font-size: 30px;
+    }
+
+    @include for-size(phone-only) {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import "../../../media";
+
+.min_st .turn_crds {
+  position: relative;
+  margin-bottom: 150px;
+
+  @include for-size(phone-only) {
+    margin-bottom: 70px;
+  }
+
+  &.shade {
+    .hng {
+      color: color(deep_theme);
+      left: 50%;
+    }
+    .msg_con {
+      .msg-card {
+        flex-direction: row-reverse;
+      }
+      &::before {
+        background: color(theme);
+        left: unset;
+        right: 0;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+  &.theme {
+    .hng {
+      left: 10%;
+      color: color(theme);
+    }
+    .msg_con {
+      .text-sec {
+        padding-left: 0;
+        padding-right: 30px;
+      }
+      &::before {
+        background: color(deep_theme);
+      }
+    }
+  }
+
+  .hng {
+    font-size: 100px;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    transform: translate(0, -55%);
+
+    @include for-size(tablet-portrait-up) {
+      font-size: 50px;
+      left: 5% !important;
+      top: 35%;
+      transform: unset;
+    }
+
+    @include for-size(phone-only) {
+      font-size: 50px;
+      left: 10% !important;
+      top: -2%;
+      transform: unset;
+    }
+  }
+
+  .msg_con {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 0;
+
+    @include for-size(tablet-portrait-up) {
+      padding-bottom: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: -1;
+      border-radius: 0 10px 10px 0;
+
+      @include for-size(tablet-portrait-up) {
+        width: 100%;
+        height: 60%;
+        top: unset;
+        border-radius: 10px 10px 0 0 !important;
+        bottom: 0;
+      }
+
+      @include for-size(phone-only) {
+        height: 70%;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .msg-card {
+    height: 400px;
+
+    @include for-size(tablet-portrait-up) {
+      height: auto;
+      flex-direction: column-reverse !important;
+    }
+
+    @include for-size(phone-only) {
+      height: auto;
+    }
+
+    .img-sec {
+      height: 300px;
+      position: relative;
+      width: 30%;
+
+      @include for-size(tablet-portrait-up) {
+        height: auto;
+        width: 100%;
+      }
+
+      img {
+        border-radius: 20px;
+        overflow: hidden;
+
+        @include for-size(tablet-portrait-up) {
+          max-height: 400px;
+        }
+      }
+    }
+    .text-sec {
+      padding-left: 30px;
+
+      h2 {
+        color: white;
+      }
+
+      @include for-size(tablet-portrait-up) {
+        margin-top: 40px;
+        width: 100%;
+        padding: 0 !important;
+      }
+
+      @include for-size(phone-only) {
+        margin-top: 30px;
+        p {
+          font-size: 1em;
+        }
+      }
+
+      p {
+        color: white;
+      }
+    }
+  }
+}

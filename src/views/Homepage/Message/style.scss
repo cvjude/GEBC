@@ -1,0 +1,111 @@
+@import '../../../media';
+
+.home_page .ms_ps {
+  margin-bottom: 100px;
+  padding: 100px 0;
+  background: rgba(#f4f5ff, 0.5);
+
+  .ms_ps_con {
+    height: 500px;
+
+    @include for-size(tablet-portrait-up) {
+      height: 400px;
+    }
+
+    @include for-size(phone-only) {
+      height: auto;
+    }
+
+    .text-sec {
+      width: 60%;
+      height: 100%;
+      padding-right: 50px;
+
+      @include for-size(phone-only) {
+        margin-bottom: 50px;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 3em;
+        color: color(theme);
+        font-weight: normal;
+
+        @include for-size(smaller-desktop) {
+          font-size: 2.5em;
+          margin-bottom: 20px;
+        }
+
+        @include for-size(tablet-landscape-up) {
+          font-size: 2em;
+        }
+
+        @include for-size(tablet-portrait-up) {
+          font-size: 1.5em;
+        }
+      }
+
+      p {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+
+        @include for-size(smaller-desktop) {
+          font-size: 1.3em;
+        }
+
+        @include for-size(tablet-landscape-up) {
+          font-size: 1.1em;
+        }
+        @include for-size(tablet-portrait-up) {
+          font-size: 1em;
+        }
+      }
+
+      a {
+        font-size: 1.3em;
+        font-weight: 500;
+
+        @include for-size(tablet-landscape-up) {
+          font-size: 1em;
+        }
+
+        @include for-size(tablet-portrait-up) {
+          font-size: 0.8em;
+        }
+      }
+    }
+    .img-sec {
+      width: 40%;
+      height: 100%;
+      position: relative;
+
+      @include for-size(phone-only) {
+        height: 400px;
+      }
+
+      .pic {
+        height: 85%;
+        width: auto;
+        @include for-size(tablet-landscape-up) {
+          width: 100%;
+        }
+
+        img {
+          border-radius: 10px;
+          width: auto;
+
+          @include for-size(tablet-landscape-up) {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .nm_plt {
+        height: 15%;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  }
+}

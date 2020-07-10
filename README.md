@@ -1,68 +1,227 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-package-broiler-plate
 
-## Available Scripts
+Run npm i to install
+npm run dev, to start development server
 
-In the project directory, you can run:
+```
+To view media and color map
+Go to the _media.scss file
+```
 
-### `yarn start`
+```
+To view the basic styles go to
+index.scss
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Put your actions and reducers in the same folder as the component.
+Like I did with the loader
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+put coustom hooks in the Hooks folder.
+I have a little hook called useCarousel there.
 
-### `yarn test`
+## The basic styles are
+### for flex styles
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+.flex {
+  display: flex;
+}
 
-### `yarn build`
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+.row-reverse {
+  flex-direction: row-reverse;
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.col-reverse {
+  flex-direction: column-reverse;
+}
 
-### `yarn eject`
+.j-start {
+  justify-content: flex-start;
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+.j-end {
+  justify-content: flex-end;
+}
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+.j-space {
+  justify-content: space-between;
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+.al-start {
+  align-items: flex-start;
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+.al-end {
+  align-items: flex-end;
+}
 
-## Learn More
+.al-bet {
+  align-content: space-between;
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### image and video
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+.img,
+svg {
+  width: 100%;
+  height: 100%;
+}
 
-### Code Splitting
+.cover {
+  object-fit: cover;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+.contain {
+  object-fit: contain;
+}
 
-### Analyzing the Bundle Size
+color styles
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+.theme-color {
+  color: color(theme);
+  fill: color(theme);
+}
 
-### Making a Progressive Web App
+.secondary-color {
+  color: color(secondary);
+  fill: color(secondary);
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### general styles
 
-### Advanced Configuration
+```
+.clipped-text {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--number);
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  hyphens: auto;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+.txt-center {
+  text-align: center;
+}
 
-### Deployment
+.container {
+  width: 1300px;
+  margin: auto;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  @include for-size(desktop-up) {
+    width: 1100px;
+  }
 
-### `yarn build` fails to minify
+  @include for-size(smaller-desktop) {
+    width: 90%;
+  }
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+.full-center {
+  display: grid;
+  align-items: center;
+}
+
+.centered {
+  display: grid;
+  place-content: center;
+}
+
+%centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-center {
+  @extend %centered;
+}
+
+.before {
+  @extend %centered;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.read-more {
+  color: color(theme);
+  font-size: 0.9em;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+}
+
+.card {
+  @include for-size(phone-only) {
+    flex-direction: column;
+  }
+
+  .img-sec,
+  .text-sec {
+    width: 50%;
+
+    @include for-size(phone-only) {
+      width: 90%;
+    }
+  }
+
+  &.var {
+    .img-sec,
+    .text-sec {
+      width: unset;
+
+      @include for-size(phone-only) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.m-150 {
+  margin-top: 150px;
+}
+
+.inblock {
+  display: inline-block;
+}
+
+.m-150 {
+  margin-top: 150px;
+}
+
+.block {
+  display: block;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.m-auto {
+  margin: auto;
+}
+```

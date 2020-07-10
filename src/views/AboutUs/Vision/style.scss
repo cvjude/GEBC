@@ -1,0 +1,55 @@
+@import "../../../media";
+
+.vs_ms {
+  padding: 70px 0;
+
+  .container {
+    justify-content: space-around;
+    @include for-size(phone-only) {
+      justify-content: center;
+    }
+  }
+
+  .vs_con {
+    border-radius: 10px;
+    width: 45%;
+    max-width: 500px;
+    height: 500px;
+    padding: 3% 3%;
+
+    @include for-size(tablet-portrait-up) {
+      width: 48%;
+    }
+
+    @include for-size(phone-only) {
+      width: 100%;
+      margin-bottom: 35px;
+      padding: 10% 8%;
+    }
+
+    p,
+    h1 {
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 30%;
+      margin-bottom: 30px;
+      @include for-size(phone-only) {
+        width: 40%;
+      }
+    }
+
+    &:nth-child(1) {
+      background: color(theme);
+    }
+
+    &:nth-child(2) {
+      background: color(off);
+    }
+  }
+}

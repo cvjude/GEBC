@@ -1,41 +1,30 @@
-import React, { Component } from 'react';
-import bannerimg from '../../assets/Image 01.png';
-import Typee from '../../components/react-typee-text';
-import './style.scss';
+import React from "react";
+import Picture from "../Picture";
+import "./style.scss";
 
-class Banner extends Component {
-  render() {
-    const { caption, isHome = false, unmount, imgSrc } = this.props;
-    return (
-      <section className='banner'>
-        <div className='image-section'>
-          <img src={bannerimg} alt='' />
-        </div>
-        <div className='content'>
-          {imgSrc ? (
-            <div className='imgCaption'>
-              <img src={imgSrc} alt='' />
+const Banner = ({ imgs, head, sub }) => {
+  const { small, medium, large } = imgs;
+  return (
+    <section className="banner flex-col mx-auto">
+      <div className="image-section">
+        <Picture
+          small={small}
+          medium={medium || large}
+          large={large}
+          className=""
+        />
+      </div>
+      <div className="inner_banner">
+        <div className="contents container flex-row m-auto">
+          <div className="text_sec flex-row">
+            <div className="text_contents">
+              <h1 className="hd">{head}</h1>
+              <p className="s_hd">{sub}</p>
             </div>
-          ) : (
-            <h2>{caption}</h2>
-          )}
-          {isHome ? (
-            <h4>
-              We are{' '}
-              <strong>
-                <Typee
-                  text={['Great!', 'Energetic!', 'Believers!']}
-                  play={true}
-                  period={0}
-                  unmount={unmount}
-                  style={{ color: 'white' }}
-                />
-              </strong>
-            </h4>
-          ) : null}
+          </div>
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 export default Banner;

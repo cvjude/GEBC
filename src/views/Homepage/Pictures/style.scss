@@ -1,0 +1,71 @@
+@import '../../../media';
+
+.g_pic {
+  margin: 200px 0 100px;
+
+  @include for-size(phone-only) {
+    margin-top: 100px;
+  }
+
+  .g_pic-con {
+    margin-top: 50px;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    row-gap: 30px;
+    column-gap: 20px;
+
+    @include for-size(smaller-desktop) {
+      height: 60vh;
+    }
+
+    @include for-size(phone-only) {
+      height: auto;
+      grid-gap: 5px;
+      // grid-template-columns: repeat(2, 1fr);
+      display: block;
+    }
+
+    .img_sec {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      @include for-size(phone-only) {
+        border-radius: 5px;
+        margin-bottom: 5px;
+        img {
+          display: block;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-row: 1/8;
+      }
+
+      &:nth-child(2) {
+        grid-row: 1/4;
+      }
+
+      &:nth-child(3) {
+        grid-row: 1/6;
+      }
+
+      &:nth-child(4) {
+        grid-row: 4/10;
+      }
+
+      &:nth-child(5) {
+        grid-row: 6/13;
+      }
+
+      &:nth-child(6) {
+        grid-row: 8/13;
+      }
+
+      &:nth-child(7) {
+        grid-row: 10/13;
+      }
+    }
+  }
+}

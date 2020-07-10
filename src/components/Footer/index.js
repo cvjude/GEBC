@@ -1,61 +1,74 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/Logo.png';
-import facebook from '../../assets/Facebook.png';
-import ig from '../../assets/Instagram.png';
-import twitter from '../../assets/Twitter.png';
-import './style.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo_grey.png";
+import fb from "../../assets/icons/facebook.png";
+import tw from "../../assets/icons/twitter.png";
+import yt from "../../assets/icons/youtube.png";
+import "./style.scss";
 
-export default function Footer() {
+const sc_links = [
+  {
+    img: tw,
+    link: "",
+  },
+  {
+    img: fb,
+    link: "",
+  },
+  {
+    img: yt,
+    link: "",
+  },
+];
+
+const links = [
+  { title: "About Us", link: "/about" },
+  { title: "Ministries", link: "/ministries" },
+  { title: "Blog", link: "#" },
+  { title: "Membership Form", link: "/membership" },
+];
+
+const extras = [
+  "17, Baptist Church Street, Gbagada Estate Phase 2, Lagos.",
+  "+234 802 737 5656",
+  "info@gebcgbagada.org",
+];
+
+const Footer = () => {
   return (
-    <section className='footer'>
-      <div className='bout container'>
-        <Link className='links logo' to='/'>
-          <img src={logo} alt='' />
-        </Link>
-
-        <div className='bout-sect'>
-          <h2>About Us</h2>
-          <p>Gbagada Estate Baptist Church,</p>
-          <p>Gbagada is a local church body that is impacting the nation.</p>
-        </div>
-
-        <div className='contact'>
-          <h2>Connect Us</h2>
-          <p>
-            17, Baptist Church Street, Gbagada Estate Phase 2, Gbagada, Lagos
-          </p>
-          <p className='num'>+234 802 737 5656</p>
-          <p>gebcgbagada@yahoo.com</p>
-        </div>
-
-        <p className='copy-right'>
-          &copy; Gbagada Estate Baptist Church. All Rights Reserved
-        </p>
-        <div className='icon'>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://www.facebook.com/'
-          >
-            <img src={facebook} alt='' />
-          </a>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://www.instagram.com/'
-          >
-            <img src={ig} alt='' />
-          </a>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://twitter.com/'
-          >
-            <img src={twitter} alt='' />
-          </a>
+    <section className="ft_sx  flex-col">
+      <div className="ft_con container flex-row">
+        <div className="contents flex-row card j-space al-start">
+          <div className="logo">
+            <img src={logo} alt="" className="contain" />
+          </div>
+          <div className="na_gt flex-col al-start">
+            <h3>Quick Navigation</h3>
+            {links.map((link, i) => (
+              <Link key={`ft_sublink_${i}`} to={link.link} className="links">
+                {link.title}
+              </Link>
+            ))}
+          </div>
+          <div className="na_gt flex-col al-start">
+            <h3>Locate Us</h3>
+            {extras.map((extra, i) => (
+              <p key={`ft_sublink_${i}`} className="links">
+                {extra}
+              </p>
+            ))}
+          </div>
+          <div className="cn_us flex-row">
+            {sc_links.map((link, i) => (
+              <Link to={link.link} key={`social_link_${i}`}>
+                <img src={link.img} alt="" className="img contain" />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Footer;

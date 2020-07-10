@@ -1,0 +1,83 @@
+@import '../../media';
+.email-list {
+  background: #fff9fd;
+  height: 500px;
+  position: relative;
+  z-index: 0;
+
+  .rb_bl,
+  .v_dots {
+    position: absolute;
+  }
+
+  .rb_bl {
+    z-index: -1;
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    // transform: rotate(-90deg);
+    overflow: hidden;
+  }
+
+  .v_dots {
+    right: 5%;
+    bottom: -10%;
+
+    @include for-size(phone-only) {
+      width: 30%;
+    }
+  }
+
+  .contents {
+    text-align: center;
+
+    .hx_1 {
+      margin-bottom: 70px;
+      .head_all {
+        width: 70%;
+        font-weight: 500;
+
+        @include for-size(tablet-landscape-up) {
+          width: 90%;
+        }
+
+        @include for-size(phone-only) {
+          width: 100%;
+        }
+      }
+    }
+
+    .form-sec {
+      width: 60%;
+      margin-top: 30px;
+
+      @include for-size(tablet-portrait-up) {
+        width: 100%;
+      }
+
+      .form {
+        height: 45px;
+        position: relative;
+
+        input {
+          width: 80%;
+          height: 100%;
+          padding: 10px 20px;
+          border: 0;
+          border-radius: 10px;
+          box-shadow: 5px 4px 20px rgba(7, 21, 147, 0.25);
+        }
+        .form-btn {
+          background: color(theme);
+          width: 19%;
+          border-radius: 10px;
+          height: 100%;
+          p {
+            color: white;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

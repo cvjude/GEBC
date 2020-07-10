@@ -1,0 +1,120 @@
+@import "../../media";
+
+.nav-1 .main-nav {
+  height: 100%;
+  height: 80px;
+
+  .logo {
+    width: 100px;
+    height: 80%;
+    // visibility: hidden;
+  }
+
+  .nav-collapse {
+    width: calc(100% - 100px);
+    padding: 0 20px 0 50px;
+    border: 0;
+    position: relative;
+
+    @include for-size(phone-only) {
+      padding: 0;
+    }
+
+    .burger {
+      display: none;
+      cursor: pointer;
+
+      svg {
+        stroke: color(theme);
+        width: 20px;
+        height: 20px;
+      }
+
+      @include for-size(tablet-portrait-up) {
+        display: block;
+      }
+    }
+
+    #input-nav {
+      display: none;
+    }
+
+    .contents {
+      width: 100%;
+
+      .l_s {
+        &.white {
+          .lin_con .links {
+            color: white;
+          }
+        }
+      }
+
+      @include for-size(tablet-portrait-up) {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 220px;
+        border-radius: 10px;
+        top: 0;
+        opacity: 0;
+        padding: 20px 40px;
+        box-shadow: 0 0 5px rgba(black, 0.1);
+        background: white;
+        visibility: hidden;
+        transition: top 0.5s ease, opacity 0.5s ease;
+
+        a {
+          display: block;
+          margin: 0 0 5px;
+          padding: 10px 5px 3px;
+          font-size: 0.9em;
+        }
+      }
+
+      .lin_con {
+        position: relative;
+        display: inline;
+
+        .dropDown {
+          position: absolute;
+          background: white !important;
+          padding: 10px;
+          min-width: 100px;
+          border-radius: 5px;
+          top: 10px;
+          left: 0;
+          opacity: 0;
+          box-shadow: 0 0 10px rgba(black, 0.2);
+          transition: 0.5s ease;
+          visibility: hidden;
+          z-index: 10;
+
+          &.op-dp_223 {
+            opacity: 1;
+            visibility: visible;
+            top: 35px;
+          }
+        }
+      }
+    }
+
+    #input-nav:checked + .contents {
+      visibility: visible;
+      top: 50px;
+      opacity: 1;
+    }
+
+    .links {
+      margin: 0 10px;
+      padding-bottom: 2px;
+      font-weight: 500;
+      position: relative;
+      color: color(theme);
+
+      &.link_active {
+        border-bottom: 2px solid color(theme);
+      }
+    }
+  }
+}
