@@ -70,6 +70,12 @@
           padding: 10px 5px 3px;
           font-size: 0.9em;
         }
+
+        &.open {
+          visibility: visible;
+          top: 50px;
+          opacity: 1;
+        }
       }
 
       .lin_con {
@@ -97,12 +103,6 @@
           }
         }
       }
-    }
-
-    #input-nav:checked + .contents {
-      visibility: visible;
-      top: 50px;
-      opacity: 1;
     }
 
     .links {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Hambuger from "../../assets/icons/Hambuger";
@@ -33,23 +33,21 @@ const NavBar = ({ slide }) => {
     }
   };
 
-  // console.log(checked);
+  const close = useCallback(() => {
+    const openedDrop = document.querySelector(".op-dp_223");
+    if (checked || openedDrop) {
+      setChecked(false);
+      openedDrop && openedDrop.classList.remove("op-dp_223");
+    }
+  }, [checked]);
 
-  // useEffect(() => {
-  //   let val = checked;
-  //   const close = (val) => {
-  //     const input = document.querySelector("#input-nav");
-  //     // console.log(input.value);
-  //     if (input.value) {
-  //       setChecked(false);
-  //       input.value = false;
-  //     }
-  //   };
-  //   window.addEventListener("scroll", () => close(val));
-  //   return () => {};
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", close);
 
-  console.log("t re");
+    return () => {
+      window.removeEventListener("scroll", close);
+    };
+  }, [close]);
 
   return (
     <>
@@ -69,7 +67,7 @@ const NavBar = ({ slide }) => {
             onChange={() => setChecked(!checked)}
           />
 
-          <div className="contents flex-row j-end">
+          <div className={`contents flex-row j-end${checked ? " open" : ""}`}>
             <div
               className={`l_s${
                 pathname === "/" ||
