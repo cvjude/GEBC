@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import logo from '../../assets/logo_grey.png';
 // import loadvid from '../../assets/logo-theme.png';
 
 const Loader = ({ tempLoad }) => {
@@ -9,7 +10,7 @@ const Loader = ({ tempLoad }) => {
     <>
       {loading || tempLoad ? (
         <main
-          className='full-center'
+          className="full-center"
           style={{
             width: '100%',
             height: '100vh',
@@ -21,9 +22,7 @@ const Loader = ({ tempLoad }) => {
             justifyContent: 'center',
           }}
         >
-          <video className='img contain' autoPlay loop>
-            {/* <source src={loadvid} type='video/mp4' /> */}
-          </video>
+          <img className="img contain" src={logo} alt="Loader" />
         </main>
       ) : null}
     </>

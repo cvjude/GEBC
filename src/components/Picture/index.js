@@ -39,17 +39,17 @@ const Picture = ({
       className={`${className} img cover`}
       key={`${smsrc}_${mdsrc}_banner`}
     >
-      <source media='(max-width: 600px)' srcSet={smsrc} />
+      <source media="(max-width: 600px)" srcSet={smsrc} />
       <source
-        media='(max-width: 900px) and (min-width: 600px)'
+        media="(max-width: 900px) and (min-width: 600px)"
         srcSet={mdsrc}
       />
-      <source media='(min-width: 900px)' srcSet={lgsrc} />
+      <source media="(min-width: 900px)" srcSet={lgsrc} />
       <img
         src={smsrc}
-        className='img cover'
+        className="img cover"
         alt={alt}
-        style={{ transition: 'all .3s ease' }}
+        style={{ transition: 'all .3s ease', background: 'grey' }}
       ></img>
     </picture>
   );

@@ -1,19 +1,18 @@
 @import '../../../media';
 
 .home_page .ps_sl {
-  padding: 100px 0;
+  padding: 0 0 100px;
   background: linear-gradient(white 80%, #fff9fd 0);
 
   .ps_sl_con {
-    height: 70vh;
+    height: 90vh;
     position: relative;
 
+    &.card {
+      width: 100% !important;
+    }
+
     .text-sec {
-      position: absolute;
-      top: 0;
-      left: 40%;
-      border-radius: 10px;
-      transform: translateX(-50%);
       width: 40%;
       z-index: 2;
       background: color(secondary);
@@ -29,9 +28,7 @@
       }
 
       @include for-size(phone-only) {
-        transform: unset;
-        left: 2%;
-        top: 10%;
+        width: 100% !important;
       }
 
       .btns {
@@ -134,6 +131,10 @@
 
       @include for-size(tablet-portrait-up) {
         width: 80%;
+      }
+
+      @include for-size(phone-only) {
+        width: 100% !important;
       }
     }
   }

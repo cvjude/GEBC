@@ -1,11 +1,11 @@
-import React from "react";
-import Image from "../../../components/Image";
-import "./style.scss";
+import React from 'react';
+import Image from '../../../components/Image';
+import './style.scss';
 
 const index = ({ title, desc, image, i }) => {
   return (
-    <section className={`turn_crds ${i === 0 ? "shade" : "theme"}`}>
-      <span className="hng">{`0${i}`}</span>
+    <section className={`turn_crds ${i === 0 ? 'shade' : 'theme'}`}>
+      <span className="hng">{`0${i + 1}`}</span>
       <div className="msg_con">
         <div className="msg-card container card flex-row j-start">
           <div className="text-sec reg_text">

@@ -1,15 +1,15 @@
-import React from "react";
-import Helmet from "react-helmet";
-import Banner from "../../components/Banner";
-import Image from "../../components/Image";
-import large from "../../assets/ministries/bannerimg.png";
-import medium from "../../assets/ministries/bannerimg-800.png";
-import small from "../../assets/ministries/bannerimg-600.png";
-import empty from "../../assets/ministries/empty.png";
-import img1 from "../../assets/ministries/img1.png";
-import img2 from "../../assets/ministries/img2.png";
-import img3 from "../../assets/ministries/img3.png";
-import "./style.scss";
+import React from 'react';
+import Helmet from 'react-helmet';
+import Banner from '../../components/Banner';
+import Image from '../../components/Image';
+import large from '../../assets/ministries/bannerimg.png';
+import medium from '../../assets/ministries/bannerimg-800.png';
+import small from '../../assets/ministries/bannerimg-600.png';
+import empty from '../../assets/ministries/empty.png';
+import img1 from '../../assets/ministries/img1.png';
+import img2 from '../../assets/ministries/img2.png';
+import img3 from '../../assets/ministries/img3.png';
+import './style.scss';
 
 const imgs = {
   large,
@@ -237,7 +237,7 @@ const About = () => {
           <div className="text-sec reg_text">
             <h2>Other Ministries</h2>
 
-            <ul className="flex-row j-space spread">
+            <ul className="flex-col al-start j-space spread">
               <li>Health Ministry</li>
               <li>Marriage Ministry</li>
               <li>Ministry Leaders</li>

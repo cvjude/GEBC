@@ -33,39 +33,39 @@ const Message = () => {
   };
 
   return (
-    <section className='ps_sl' ref={ref}>
-      <div className='ps_sl_con flex-row j-end card var'>
-        <div className='text-sec flex-col al-start'>
-          <TransitionGroup className='conts'>
+    <section className="ps_sl" ref={ref}>
+      <div className="ps_sl_con flex-row al-start j-end card var">
+        <div className="text-sec flex-col al-start">
+          <TransitionGroup className="conts">
             <CSSTransition
               timeout={500}
-              classNames='slide'
+              classNames="slide"
               key={`flag_content_${currentSection}`}
             >
-              <div className='slide'>
+              <div className="slide">
                 <h1>{data[currentSection].title}</h1>
                 <p>{data[currentSection].desc}</p>
               </div>
             </CSSTransition>
           </TransitionGroup>
-          <div className='btns flex-row j-space'>
+          <div className="btns flex-row j-space">
             <div
-              className='btn_icon flex-row'
+              className="btn_icon flex-row"
               onClick={() => handleClick('left')}
             >
               <Larrow />
             </div>
             <div
-              className='btn_icon flex-row'
+              className="btn_icon flex-row"
               onClick={() => handleClick('right')}
             >
               <Rarrow />
             </div>
           </div>
         </div>
-        <div className='img-sec flex-col'>
+        <div className="img-sec flex-col">
           <Image
-            imgClass='img cover'
+            imgClass="img cover"
             image={inchurch}
             lazyLoad={true}
             usePlaceHolder={true}

@@ -1,4 +1,4 @@
-@import "../../media";
+@import '../../media';
 
 .min_st {
   .container {
@@ -12,7 +12,6 @@
     }
     .text-sec {
       margin-top: 30px;
-      width: 50%;
       flex-wrap: wrap;
 
       @include for-size(smaller-desktop) {
@@ -24,6 +23,9 @@
       }
 
       .spread {
+        li {
+          margin-bottom: 6px;
+        }
         @include for-size(phone-only) {
           flex-direction: column;
           align-items: flex-start;

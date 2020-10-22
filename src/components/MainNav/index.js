@@ -1,51 +1,60 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
-import Hambuger from "../../assets/icons/Hambuger";
-import { useLocation } from "react-router-dom";
-import "./style.scss";
+import React, { useState, useEffect, useCallback } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import logo from '../../assets/logo.png';
+import Hambuger from '../../assets/icons/Hambuger';
+import { useLocation } from 'react-router-dom';
+import './style.scss';
 
 const links = [
-  { title: "About", link: "/about" },
-  { title: "Ministries", link: "/ministries" },
-  { title: "Membership", link: "/membership" },
+  { title: 'About', link: '/about' },
+  { title: 'Ministries', link: '/ministries' },
+  { title: 'Membership', link: '/membership' },
   {
-    title: "Resources",
-    link: "/resources",
+    title: 'Resources',
+    link: '/resources',
     menus: [
       {
-        title: "Blog",
-        link: "/blog",
+        title: 'Blog',
+        link: '/blog',
       },
     ],
   },
-  { title: "Contact us", link: "/contact" },
+  { title: 'Contact us', link: '/contact' },
 ];
 
 const NavBar = ({ slide }) => {
   const [checked, setChecked] = useState(false);
   const { pathname } = useLocation();
+  const linkRef = [];
 
-  const onClick = (e, prevent) => {
+  const onClick = (e, prevent, parent) => {
     if (prevent) {
+      parent.focus();
+
       e.preventDefault();
-      e.target.nextElementSibling.classList.toggle("op-dp_223");
+      e.target.nextElementSibling.classList.toggle('op-dp_223');
     }
   };
 
   const close = useCallback(() => {
-    const openedDrop = document.querySelector(".op-dp_223");
+    const openedDrop = document.querySelector('.op-dp_223');
     if (checked || openedDrop) {
       setChecked(false);
-      openedDrop && openedDrop.classList.remove("op-dp_223");
+      openedDrop && openedDrop.classList.remove('op-dp_223');
     }
   }, [checked]);
 
+  const blurClose = (e, parent) => {
+    if (!parent.contains(e.relatedTarget)) {
+      close();
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", close);
+    window.addEventListener('scroll', close);
 
     return () => {
-      window.removeEventListener("scroll", close);
+      window.removeEventListener('scroll', close);
     };
   }, [close]);
 
@@ -67,25 +76,30 @@ const NavBar = ({ slide }) => {
             onChange={() => setChecked(!checked)}
           />
 
-          <div className={`contents flex-row j-end${checked ? " open" : ""}`}>
+          <div className={`contents flex-row j-end${checked ? ' open' : ''}`}>
             <div
               className={`l_s${
-                pathname === "/" ||
-                pathname === "/contact" ||
-                pathname === "/blog" ||
+                pathname === '/' ||
+                pathname === '/contact' ||
+                pathname === '/blog' ||
                 slide
-                  ? ""
-                  : " white"
+                  ? ''
+                  : ' white'
               }`}
             >
               {links.map((link, i) => (
-                <div className="lin_con" key={`sublink_${i}`}>
+                <div
+                  className="lin_con"
+                  key={`sublink_${i}`}
+                  onBlur={(e) => blurClose(e, linkRef[i])}
+                  ref={(e) => (linkRef[i] = e)}
+                  tabIndex={-1}
+                >
                   <NavLink
                     to={link.link}
-                    className={`links${link.className || ""}`}
+                    className={`links${link.className || ''}`}
                     activeClassName="link_active"
-                    onClick={(e) => onClick(e, !!link.menus)}
-                    onBlur={(e) => onClick(e, true)}
+                    onClick={(e) => onClick(e, !!link.menus, linkRef[i])}
                     as="div"
                   >
                     {link.title}
@@ -96,7 +110,13 @@ const NavBar = ({ slide }) => {
                           className="dropDown"
                           key={`drop-down_${link.title}`}
                         >
-                          <NavLink to={menu.link}>{menu.title}</NavLink>
+                          <NavLink
+                            to={menu.link}
+                            onClick={close}
+                            className="dr-link"
+                          >
+                            {menu.title}
+                          </NavLink>
                         </div>
                       ))
                     : null}
