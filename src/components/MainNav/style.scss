@@ -1,4 +1,4 @@
-@import "../../media";
+@import '../../media';
 
 .nav-1 .main-nav {
   height: 100%;
@@ -46,6 +46,10 @@
         &.white {
           .lin_con .links {
             color: white;
+
+            @include for-size(tablet-portrait-up) {
+              color: color(theme) !important;
+            }
           }
         }
       }
@@ -69,6 +73,7 @@
           margin: 0 0 5px;
           padding: 10px 5px 3px;
           font-size: 0.9em;
+          color: color(theme) !important;
         }
 
         &.open {
