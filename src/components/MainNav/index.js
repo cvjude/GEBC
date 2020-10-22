@@ -15,7 +15,7 @@ const links = [
     menus: [
       {
         title: 'Blog',
-        link: '/blog',
+        link: '#',
       },
     ],
   },
